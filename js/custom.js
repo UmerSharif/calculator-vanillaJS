@@ -6,4 +6,4 @@ buttons.addEventListener('click', handleButtons);
 
 function handleButtons(e){
 	
-};
+}
