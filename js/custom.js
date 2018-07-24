@@ -1,9 +1,20 @@
-let buttons = document.getElementById('buttons');
+let buttons = document.querySelectorAll('#buttons');
 let display = document.getElementById('display');
 
+for(let button of buttons){
 
-buttons.addEventListener('click', handleButtons);
+    button.addEventListener('click', handleButton);
 
-function handleButtons(e){
-	
 }
+
+function handleButton(e){
+
+    if(e.target.tagName != 'BUTTON') {
+
+        return;
+    }
+
+    let keyVal = e.target.value;
+    display.innerHTML += keyVal;
+}
+
