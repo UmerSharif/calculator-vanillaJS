@@ -9,7 +9,7 @@ for(let button of buttons){
 
 function handleButton(e){
 
-    if(e.target.tagName != 'BUTTON') {
+    if (e.target.tagName !== 'BUTTON') {
 
         return;
     }
