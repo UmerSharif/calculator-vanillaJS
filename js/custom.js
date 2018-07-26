@@ -15,6 +15,10 @@ function handleButton(e){
     }
 
     let keyVal = e.target.value;
-    display.innerHTML += keyVal;
+
+    if(e.target.value !== '=') {
+        display.innerHTML += keyVal;
+
+    }
 }
 
