@@ -15,10 +15,12 @@ function handleButton(e){
     }
 
     let keyVal = e.target.value;
+    let inputVal = display.innerHTML;
 
-    if(e.target.value !== '=') {
-        display.innerHTML += keyVal;
-
+    if(keyVal === '=') {
+        let equation = inputVal;
+        display.innerHTML = eval(inputVal);
     }
+
 }
 
