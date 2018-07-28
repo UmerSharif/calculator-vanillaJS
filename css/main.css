@@ -11,12 +11,13 @@ div, p{
 
 
 #calculator {
-background-color: #424242;
-height:400px;
-width: 300px;
-margin-top: 10%;
-margin-left: auto;
-margin-right: auto;
+    background-color: #424242;
+    height:400px;
+    width: 300px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
 }
 
 #title {
@@ -37,7 +38,6 @@ margin-right: auto;
      width: 280px;
      height: auto;
      margin-left: 17px;
-
 }
 button {
     background-color: #e12c51;
@@ -45,7 +45,7 @@ button {
     border: none;
     height: 40px;
      width: 50px;
-
+    border-radius: 6px;
 }
 .top {
     height: 50px;

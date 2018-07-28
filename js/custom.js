@@ -21,7 +21,7 @@ function handleButton(e){
         display.innerHTML = "";
     }
 
-     if(keyVal === '=') {
+     else if(keyVal === '=') {
         let equation = inputVal;
         display.innerHTML = eval(equation);
     }else {
