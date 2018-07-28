@@ -17,7 +17,11 @@ function handleButton(e){
     let keyVal = e.target.value;
     let inputVal = display.innerHTML;
 
-    if(keyVal === '=') {
+    if(keyVal === "ac") {
+        display.innerHTML = "";
+    }
+
+     if(keyVal === '=') {
         let equation = inputVal;
         display.innerHTML = eval(equation);
     }else {
