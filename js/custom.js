@@ -27,8 +27,17 @@ function handleButton(e){
 
         let lastChar = equation[equation.length - 1];
 
-        if(lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/' || lastChar === '.'){
+        // removing the last character if its not a number
+        // method 1
+
+        /*if(lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/' || lastChar === '.'){
             equation = equation.replace(/.$/, "");
+        }*/
+
+        // removing last char if its not a number method 2, short and cool
+
+        if(operators.indexOf(lastChar > -1 || lastChar === '.')){
+            equation = equation.replace(/.$/, ""); //.$ will match any character at the end of a string.
         }
 
 
