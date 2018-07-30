@@ -22,7 +22,7 @@ function handleButton(e){
         display.innerHTML = "";
     }
 
-     else if(keyVal === '=') {
+    else if(keyVal === '=') {
         let equation = inputVal;
 
         let lastChar = equation[equation.length - 1];
@@ -36,7 +36,7 @@ function handleButton(e){
 
         // removing last char if its not a number method 2, short and cool
 
-        if(operators.indexOf(lastChar > -1 || lastChar === '.')){
+        if(operators.indexOf(lastChar) > -1 || lastChar === '.'){
             equation = equation.replace(/.$/, ""); //.$ will match any character at the end of a string.
         }
 
@@ -47,4 +47,3 @@ function handleButton(e){
     }
 
 }
-
