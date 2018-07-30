@@ -15,7 +15,7 @@ function handleButton(e){
     }
 
     let keyVal = e.target.value;
-    let inputVal = display.innerHTML;
+    let inputData = display.innerHTML;
     let operators = ['+','-','*','/'];
 
     if(keyVal === "ac") {
@@ -23,7 +23,7 @@ function handleButton(e){
     }
 
     else if(keyVal === '=') {
-        let equation = inputVal;
+        let equation = inputData;
 
         let lastChar = equation[equation.length - 1];
 
@@ -40,9 +40,26 @@ function handleButton(e){
             equation = equation.replace(/.$/, ""); //.$ will match any character at the end of a string.
         }
 
-
         display.innerHTML = eval(equation);
-    }else {
+    }
+
+
+    // more tasks
+
+    else if(operators.indexOf(keyVal) > -1){
+
+        let lastChar = inputData[inputData.length-1];
+
+        if(inputData !== '' && operators.indexOf(lastChar) === -1){
+            display.innerHTML += keyVal;
+        }
+    }
+
+
+
+
+
+    else {
         display.innerHTML += keyVal;
     }
 
