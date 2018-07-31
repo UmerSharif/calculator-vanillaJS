@@ -57,8 +57,13 @@ function handleButton(e){
         }
 
         // if last char is operator and if another operator is pressed replace the previous one
-        if(operators.indexOf(lastChar) > -1){
+        // also if the first character is "-" do not replace it.
+        if(operators.indexOf(lastChar) > -1 && inputData.length > 1){
             display.innerHTML = inputData.replace(/.$/, keyVal);
+        }
+        // only allow "-" sign to appear before any digits
+        if(inputData === "" && keyVal === "-"){
+            display.innerHTML += keyVal;
         }
 
     }
