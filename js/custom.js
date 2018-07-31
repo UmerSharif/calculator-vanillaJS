@@ -49,9 +49,10 @@ function handleButton(e){
 
     else if(operators.indexOf(keyVal) > -1){
 
+
         let lastChar = inputData[inputData.length-1];
 // only add operator if data is not empty and lastchar is not an operator
-        if(inputData !== '' && operators.indexOf(lastChar) === -1){
+        if(inputData !== "" && operators.indexOf(lastChar) === -1){
             display.innerHTML += keyVal;
         }
 
@@ -59,12 +60,8 @@ function handleButton(e){
         if(operators.indexOf(lastChar) > -1){
             display.innerHTML = inputData.replace(/.$/, keyVal);
         }
+
     }
-
-
-
-
-
     else {
         display.innerHTML += keyVal;
     }
