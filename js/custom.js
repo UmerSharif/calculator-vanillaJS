@@ -16,6 +16,7 @@ function handleButton(e) {
 
     let keyVal = e.target.value;
     let inputData = display.innerHTML;
+    let lastDecimal = inputData[inputData.length -1];
     let operators = ['+', '-', '*', '/'];
 
     if (keyVal === "ac") {
@@ -68,8 +69,12 @@ function handleButton(e) {
 
     }
 
-    // logic for decimal
 
+
+    // logic for decimal
+else if(keyVal === lastDecimal){
+    display.innerHTML = inputData.replace(".",".");
+    }
     //logic for decimal ends
 
     else {
