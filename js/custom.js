@@ -16,7 +16,6 @@ function handleButton(e) {
 
     let keyVal = e.target.value;
     let inputData = display.innerHTML;
-    let lastDecimal = inputData[inputData.length -1];
     let operators = ['+', '-', '*', '/'];
 
     if (keyVal === "ac") {
@@ -53,7 +52,7 @@ function handleButton(e) {
 
         let lastChar = inputData[inputData.length - 1];
 // only add operator if data is not empty and lastchar is not an operator
-        if (inputData !== "" && operators.indexOf(lastChar) === -1) {
+        if (inputData !== "0" && operators.indexOf(lastChar) === -1){ // when the second condition i false run the if {
             display.innerHTML += keyVal;
         }
 
@@ -63,8 +62,8 @@ function handleButton(e) {
             display.innerHTML = inputData.replace(/.$/, keyVal);
         }
         // only allow "-" sign to appear before any digits
-        if (inputData === "" && keyVal === "-") {
-            display.innerHTML += keyVal;
+        if (inputData === "0" && keyVal === "-") {
+            display.innerHTML = inputData.replace("0", keyVal);
         }
 
     }
@@ -72,9 +71,9 @@ function handleButton(e) {
 
 
     // logic for decimal
-else if(keyVal === lastDecimal){
-    display.innerHTML = inputData.replace(".",".");
-    }
+   /* else if(keyVal === lastDecimal){
+        display.innerHTML = inputData.replace(".",".");
+    }*/
     //logic for decimal ends
 
     else {
