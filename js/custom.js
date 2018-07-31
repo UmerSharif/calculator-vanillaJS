@@ -45,7 +45,7 @@ function handleButton(e){
     }
 
 
-    // more tasks
+    // more tasks some restriction regarding operators
 
     else if(operators.indexOf(keyVal) > -1){
 
