@@ -1,5 +1,6 @@
 let buttons = document.querySelectorAll('#buttons');
 let display = document.getElementById('display');
+let decimalPresent = true;
 
 for (let button of buttons) {
 
@@ -17,6 +18,8 @@ function handleButton(e) {
     let keyVal = e.target.value;
     let inputData = display.innerHTML;
     let operators = ['+', '-', '*', '/'];
+    let numbers = ['1','2','3','4','5','6','7','8','9','0'];
+
 
     if (keyVal === "ac") {
         display.innerHTML = "0";
@@ -74,14 +77,48 @@ function handleButton(e) {
    /* else if(keyVal === lastDecimal){
         display.innerHTML = inputData.replace(".",".");
     }*/
+   else if(keyVal === '.'){
+
+        let lastOperator = inputData[inputData.length - 1];
+        let secondLastDigit = inputData[inputData.length - 2];
+        let lastDigit = inputData[inputData.length - 1];
+
+       if(decimalPresent){
+           display.innerHTML += keyVal;
+           decimalPresent = !decimalPresent;
+       }
+       else if(numbers.indexOf(secondLastDigit) > -1 && operators.indexOf(lastOperator) > -1 ) {
+
+               display.innerHTML += keyVal;
+           }
+
+        else  if(numbers.indexOf(lastDigit) > -1 || inputData === "" || inputData === '0'){
+           if(!decimalPresent){
+               display.innerHTML += keyVal; // fix this
+           }
+       }
+
+
+
+    }
+
+
+
     //logic for decimal ends
 
     else {
         //When inputting numbers, my calculator should not allow a number to begin with multiple zeros
+
+
+
+
         if(inputData === '0'){
             display.innerHTML = inputData.replace("0","");
         }
+
         display.innerHTML += keyVal;
+
+
     }
 
 }
