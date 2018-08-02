@@ -56,7 +56,7 @@ function handleButton(e) {
 
     // more tasks some restriction regarding operators
 
-    else if (operators.indexOf(keyVal) > -1) {
+    else if (operators.indexOf(keyVal) > -1) { // if operator is pressed
         decimalPresent = true;
         let lastChar = inputData[inputData.length - 1];
         // only add operator if data is not empty and lastchar is not an operator
