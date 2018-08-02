@@ -37,6 +37,7 @@ button {
     height: 40px;
      width: 50px;
     border-radius: 6px;
+    font-size: 1.2rem;
 }
 .top {
     height: 50px;
