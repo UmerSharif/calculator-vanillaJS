@@ -50,3 +50,24 @@ button {
 .top {
     height: 50px;
 }
+
+#zero {
+    width: 116px;
+}
+
+#clear {
+ width: 116px;
+}
+
+#equals {
+    width: 116px;
+}
+
+.top {
+    display: flex;
+
+}
+
+.top div {
+    margin-left: auto;
+}
