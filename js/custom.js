@@ -23,6 +23,7 @@ function handleButton(e) {
 
     if (keyVal === "ac") {
         display.innerHTML = "0";
+        decimalPresent = true; // when ever input is cleared, turn decimal to true
     }
 
     else if (keyVal === '=') {
@@ -71,15 +72,10 @@ function handleButton(e) {
 
     }
 
-
-
-    // logic for decimal
-   /* else if(keyVal === lastDecimal){
-        display.innerHTML = inputData.replace(".",".");
-    }*/
    else if(keyVal === '.'){
 
         let lastOperator = inputData[inputData.length - 1];
+        let secondLastOperator = inputData[inputData.length - 2];
         let secondLastDigit = inputData[inputData.length - 2];
         let lastDigit = inputData[inputData.length - 1];
 
@@ -87,16 +83,16 @@ function handleButton(e) {
            display.innerHTML += keyVal;
            decimalPresent = !decimalPresent;
        }
-       else if(numbers.indexOf(secondLastDigit) > -1 && operators.indexOf(lastOperator) > -1 ) {
+       else if(numbers.indexOf(secondLastDigit) > -1 && operators.indexOf(lastOperator) > -1 || numbers.indexOf(lastDigit) > -1 && operators.indexOf(secondLastOperator) > -1 ) {
 
                display.innerHTML += keyVal;
            }
 
-        else  if(numbers.indexOf(lastDigit) > -1 || inputData === "" || inputData === '0'){
-           if(!decimalPresent){
-               display.innerHTML += keyVal; // fix this
+    /*    else  if(numbers.indexOf(lastDigit) > -1 || inputData === "" || inputData === '0'){
+           if(decimalPresent){
+               display.innerHTML += keyVal; // fix this // do not need it any more
            }
-       }
+       }*/
 
 
 
