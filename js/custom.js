@@ -44,8 +44,7 @@ function handleButton(e) {
         if (operators.indexOf(lastChar) > -1 || lastChar === '.') {
             equation = equation.replace(/.$/, ""); //.$ will match any character at the end of a string.
         }
-
-        display.innerHTML = eval(equation);
+            display.innerHTML = eval(equation);
     }
 
 
@@ -53,9 +52,8 @@ function handleButton(e) {
 
     else if (operators.indexOf(keyVal) > -1) {
 
-
         let lastChar = inputData[inputData.length - 1];
-// only add operator if data is not empty and lastchar is not an operator
+        // only add operator if data is not empty and lastchar is not an operator
         if (inputData !== "0" && operators.indexOf(lastChar) === -1){ // when the second condition i false run the if {
             display.innerHTML += keyVal;
         }
@@ -85,25 +83,18 @@ function handleButton(e) {
        }
 
        // to allow decimal after the last two inputs are either operator and digit or digit and operator like(+6 or 6+)
+           // this condition can be replaced by only adding decimalpresent = true when any operator is pressed. in the operator section
        else if(numbers.indexOf(secondLastDigit) > -1 && operators.indexOf(lastOperator) > -1 || numbers.indexOf(lastDigit) > -1 && operators.indexOf(secondLastOperator) > -1 ) {
 
                display.innerHTML += keyVal;
            }
     }
-
-
-
     //logic for decimal ends
-
     else {
         //When inputting numbers, my calculator should not allow a number to begin with multiple zeros
         if(inputData === '0'){
             display.innerHTML = inputData.replace("0","");
         }
-
-        display.innerHTML += keyVal;
-
-
+            display.innerHTML += keyVal;
     }
-
 }
