@@ -83,19 +83,12 @@ function handleButton(e) {
            display.innerHTML += keyVal;
            decimalPresent = !decimalPresent;
        }
+
+       // to allow decimal after the last two inputs are either operator and digit or digit and operator like(+6 or 6+)
        else if(numbers.indexOf(secondLastDigit) > -1 && operators.indexOf(lastOperator) > -1 || numbers.indexOf(lastDigit) > -1 && operators.indexOf(secondLastOperator) > -1 ) {
 
                display.innerHTML += keyVal;
            }
-
-    /*    else  if(numbers.indexOf(lastDigit) > -1 || inputData === "" || inputData === '0'){
-           if(decimalPresent){
-               display.innerHTML += keyVal; // fix this // do not need it any more
-           }
-       }*/
-
-
-
     }
 
 
@@ -104,10 +97,6 @@ function handleButton(e) {
 
     else {
         //When inputting numbers, my calculator should not allow a number to begin with multiple zeros
-
-
-
-
         if(inputData === '0'){
             display.innerHTML = inputData.replace("0","");
         }
