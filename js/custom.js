@@ -29,8 +29,13 @@ function handleButton(e) {
     else if (keyVal === '=') {
 
         let equation = inputData;
-
         let lastChar = equation[equation.length - 1];
+        let checkDecimal = ".";
+
+        if(inputData.indexOf(checkDecimal) > -1) {
+            decimalPresent = false;
+        }
+
 
         // removing the last character if its not a number
         // method 1
@@ -51,7 +56,7 @@ function handleButton(e) {
     // more tasks some restriction regarding operators
 
     else if (operators.indexOf(keyVal) > -1) {
-
+        decimalPresent = true;
         let lastChar = inputData[inputData.length - 1];
         // only add operator if data is not empty and lastchar is not an operator
         if (inputData !== "0" && operators.indexOf(lastChar) === -1){ // when the second condition i false run the if {
@@ -72,10 +77,10 @@ function handleButton(e) {
 
    else if(keyVal === '.'){
 
-        let lastOperator = inputData[inputData.length - 1];
+        /*let lastOperator = inputData[inputData.length - 1];
         let secondLastOperator = inputData[inputData.length - 2];
         let secondLastDigit = inputData[inputData.length - 2];
-        let lastDigit = inputData[inputData.length - 1];
+        let lastDigit = inputData[inputData.length - 1];*/
 
        if(decimalPresent){
            display.innerHTML += keyVal;
@@ -84,10 +89,11 @@ function handleButton(e) {
 
        // to allow decimal after the last two inputs are either operator and digit or digit and operator like(+6 or 6+)
            // this condition can be replaced by only adding decimalpresent = true when any operator is pressed. in the operator section
-       else if(numbers.indexOf(secondLastDigit) > -1 && operators.indexOf(lastOperator) > -1 || numbers.indexOf(lastDigit) > -1 && operators.indexOf(secondLastOperator) > -1 ) {
+
+       /*else if(numbers.indexOf(secondLastDigit) > -1 && operators.indexOf(lastOperator) > -1 || numbers.indexOf(lastDigit) > -1 && operators.indexOf(secondLastOperator) > -1 ) {
 
                display.innerHTML += keyVal;
-           }
+           }*/
     }
     //logic for decimal ends
     else {
