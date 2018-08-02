@@ -32,6 +32,7 @@ function handleButton(e) {
         let lastChar = equation[equation.length - 1];
         let checkDecimal = ".";
 
+        // if there is decimal in the final answer make the decimalPresent false to avoid adding more decimal
         if(inputData.indexOf(checkDecimal) > -1) {
             decimalPresent = false;
         }
