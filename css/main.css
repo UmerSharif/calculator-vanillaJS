@@ -31,7 +31,7 @@ div, p{
      margin-left: 17px;
 }
 button {
-    background-color: #e12c51;
+    background-color: #00d1b2;
     margin: 0 4px 10px 8px !important;
     border: none;
     height: 40px;
@@ -40,6 +40,13 @@ button {
     font-size: 1.2rem;
     color: bisque;
 }
+
+button:focus {
+    outline: none;
+    color: #e12c51;
+}
+
+
 
 #zero {
     width: 116px;
@@ -62,10 +69,15 @@ button {
 }
 
 #display {
-     margin-left: auto;
+    margin-left: auto;
     color: coral;
     font-size: 1.2rem;
+    margin-right: 5px;
 
  }
+
+.componentBox {
+    margin: auto;
+}
 
 
