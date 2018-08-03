@@ -43,7 +43,7 @@ button {
 
 button:focus {
     outline: none;
-    color: #e12c51;
+    color: #7f2652;
 }
 
 
@@ -77,9 +77,5 @@ button:focus {
     margin-right: 5px;
 
  }
-
-.componentBox {
-    margin: auto;
-}
 
 
