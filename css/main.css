@@ -15,7 +15,7 @@ div, p{
 
 #calculator {
     background-color: #424242;
-    height:400px;
+    height:340px;
     width: 300px;
     margin-top: 10%;
     margin-left: auto;
@@ -38,9 +38,7 @@ button {
      width: 50px;
     border-radius: 6px;
     font-size: 1.2rem;
-}
-.top {
-    height: 50px;
+    color: bisque;
 }
 
 #zero {
@@ -56,10 +54,18 @@ button {
 }
 
 .top {
+    height: 70px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
-.top div {
-    margin-left: auto;
-}
+#display {
+     margin-left: auto;
+    color: coral;
+    font-size: 1.2rem;
+
+ }
+
+
