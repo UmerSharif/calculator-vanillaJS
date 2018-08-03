@@ -47,17 +47,19 @@ button:focus {
 }
 
 
-
 #zero {
     width: 116px;
+    background: #1496ed;
 }
 
 #clear {
  width: 116px;
+    background: #e12c51;
 }
 
 #equals {
     width: 116px;
+    background: #ffa102;
 }
 
 .top {
