@@ -8,10 +8,6 @@ body, html {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-div, p{
-    color: #ffff;
-}
-
 
 #calculator {
     background-color: #424242;
@@ -77,5 +73,12 @@ button:focus {
     margin-right: 5px;
 
  }
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: auto;
+    color: #333333;
+}
 
 
